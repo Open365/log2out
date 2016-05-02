@@ -11,7 +11,6 @@ var logger = log2out.getLogger('MyCoolLogger');
 var name = 'Peter';
 logger.info('hello there "%s"', name, 3, 'String interpolation works fine.');
 ```
-
 ## log levels
 log levels can be set using LOG4JS configuration file by setting environment variable:
 
