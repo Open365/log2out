@@ -4,7 +4,6 @@ log to stdout
 ## usage example
 *log2out* API is very similar (in fact it is a subset of log4js API).
 
-
 ```javascript
 var log2out = require('log2out');
 var logger = log2out.getLogger('MyCoolLogger');
