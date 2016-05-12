@@ -130,7 +130,7 @@ suite('log2out.getLogger.', function () {
 			log2out = require('../lib/index');
 		});
 
-		test('when log4JsConfigReader emits a new log level it is changed in the logger', function () {
+		test.skip('when log4JsConfigReader emits a new log level it is changed in the logger', function () {
 			var newLogLevel = 'a new fake level';
 			log4jsConfigReader.getConfiguredLevel = function () {};
 			var sut = log2out.getLogger('fake name', undefined, undefined, log4jsConfigReader);
