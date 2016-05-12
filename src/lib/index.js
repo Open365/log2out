@@ -19,13 +19,14 @@ var defaultSettings = {
 var returnDummyLogger = false;
 
 function getLogger (name, settings, levelName, log4jsConfigReader) {
-	log4jsConfigReader = log4jsConfigReader || new Log4jsConfigReader(name);
+	//log4jsConfigReader = log4jsConfigReader || new Log4jsConfigReader(name);
 
 	if (!settings) {
 		settings = defaultSettings;
 	}
 	if (!levelName) {
-		levelName = log4jsConfigReader.getConfiguredLevel();
+		//levelName = log4jsConfigReader.getConfiguredLevel();
+		levelName = 'DEBUG';
 	}
 
 	if (returnDummyLogger) {
@@ -33,9 +34,10 @@ function getLogger (name, settings, levelName, log4jsConfigReader) {
 	}
 	var logger = ConsoleLog(name, settings, levelName);
 
-	log4jsConfigReader.on('logLevelChanged', function (newLogLevel) {
+	/*log4jsConfigReader.on('logLevelChanged', function (newLogLevel) {
 		logger.setLevelName(newLogLevel);
 	});
+	*/
 
 	return logger;
 }
